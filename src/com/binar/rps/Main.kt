@@ -17,7 +17,7 @@ object Main : Callback {
             
         """.trimIndent())
             print("Silakan  pilih :")
-            val pilihan = readLine().toString().toIntOrNull()
+            val pilihan = readLine().toString().trim().toIntOrNull()
             toIntOrNullSafe(pilihan.toString())
 
 
@@ -47,9 +47,9 @@ object Main : Callback {
            GUNTING, BATU & KERTAS
     """.trimIndent())
         print("Pemain 1: ")
-        val input1 = readLine().toString().lowercase()
+        val input1 = readLine().toString().lowercase().trim()
         print("Pemain 2: ")
-        val input2 = readLine().toString().lowercase()
+        val input2 = readLine().toString().lowercase().trim()
         println()
         val controller = Controller(this)
         controller.cekSuit(input1, input2)
