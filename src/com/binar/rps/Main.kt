@@ -35,10 +35,10 @@ object Main : Callback {
                 """.trimIndent())
             }
 
-        } while (pilihan == 1 || pilihan == null || pilihan > 2 )
+        } while (pilihan == 1 || pilihan == null || pilihan > 2)
     }
 
-     fun playGame() {
+    private fun playGame() {
         println("""
         ===========================
         ------------PLAY-----------
@@ -48,13 +48,19 @@ object Main : Callback {
     """.trimIndent())
         print("Pemain 1: ")
         val input1 = readLine().toString().lowercase().trim()
-        print("Pemain 2: ")
+        print("Computer uwu: ")
+        if (input1 != "batu" && input1 != "gunting" && input1 != "kertas") {
+            println("Pilih yang bener dong :(")
+            playGame()
+        } else {
+            val com = arrayListOf("batu", "gunting", "kertas")
+            val inputCom = com.random()
+            println(inputCom)
+            println()
+            val controller = Controller(this)
+            controller.cekSuit(input1, inputCom)
+        }
 
-         val com = arrayListOf<String>("batu", "gunting","kertas")
-         val inputCom = com.random()
-         println(inputCom)
-        val controller = Controller(this)
-        controller.cekSuit(input1, inputCom)
     }
 
 
@@ -63,8 +69,8 @@ object Main : Callback {
     }
 }
 
-private fun toIntOrNullSafe(value: String): Boolean{
-    return  when(value.toIntOrNull()){
+private fun toIntOrNullSafe(value: String): Boolean {
+    return when (value.toIntOrNull()) {
         null -> false
         else -> true
     }
