@@ -38,7 +38,7 @@ object Main : Callback {
         } while (pilihan == 1 || pilihan == null || pilihan > 2 )
     }
 
-    private fun playGame() {
+     fun playGame() {
         println("""
         ===========================
         ------------PLAY-----------
@@ -49,10 +49,12 @@ object Main : Callback {
         print("Pemain 1: ")
         val input1 = readLine().toString().lowercase().trim()
         print("Pemain 2: ")
-        val input2 = readLine().toString().lowercase().trim()
-        println()
+
+         val com = arrayListOf<String>("batu", "gunting","kertas")
+         val inputCom = com.random()
+         println(inputCom)
         val controller = Controller(this)
-        controller.cekSuit(input1, input2)
+        controller.cekSuit(input1, inputCom)
     }
 
 
