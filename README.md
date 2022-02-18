@@ -13,3 +13,8 @@ Writing code using OOP principles:
 - Properties
 - Access Modifiers
 - Interface
+
+
+<p align="center">
+  <img src="image/image-terminal-game.PNG">
+</p>
