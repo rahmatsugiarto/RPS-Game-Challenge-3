@@ -1,4 +1,4 @@
-# Rock Paper Scissors Terminal
+# Rock Paper Scissors Terminal Game
 
 I made a rock paper scissors terminal game with kotlin in IntelliJ IDEA.
 
