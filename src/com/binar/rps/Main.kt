@@ -26,7 +26,7 @@ object Main : Callback {
                 2 -> println("""
                     ===========================
                       Sampai jumpa lagi yaa :)
-                    ===========================
+                    ==========================
                 """.trimIndent())
                 else -> println("""
                     ===========================
